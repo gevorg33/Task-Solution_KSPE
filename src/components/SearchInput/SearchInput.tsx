@@ -1,11 +1,11 @@
-import React, {FC, useState} from 'react';
+import React, {FC, PropsWithChildren, useState} from 'react';
 import CardList from "../CardList/CardList";
 
 interface IsearchInput{
     list: any[];
 }
 
-const SearchInput:FC<IsearchInput> = (props):any => {
+const SearchInput:FC<IsearchInput> = (props:PropsWithChildren<IsearchInput>):any => {
     const [searchedList, setSearchedList] = useState<any[]>([]);
     const search = (e:any) => {
         const searchedWord = e.target.value;

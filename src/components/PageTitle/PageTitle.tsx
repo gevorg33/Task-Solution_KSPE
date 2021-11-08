@@ -1,10 +1,10 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 
 interface IPageTitle{
     title: string;
 }
 
-const PageTitle:FC<IPageTitle> = (props):JSX.Element => {
+const PageTitle:FC<IPageTitle> = (props:PropsWithChildren<IPageTitle>):JSX.Element => {
     return <h1 className="page-title">{props.title}</h1>;
 };
 

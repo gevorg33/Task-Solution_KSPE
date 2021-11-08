@@ -1,13 +1,13 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import { Result, Button } from 'antd';
 import Content from "../Layouts/Content/Content";
 import { useHistory } from 'react-router-dom';
 
 interface IErrorContent{
-    error: ErrorConstructor;
+    error?: ErrorConstructor;
 }
 
-const ErrorContent:FC<IErrorContent> = (props):JSX.Element => {
+const ErrorContent:FC<IErrorContent> = (props:PropsWithChildren<IErrorContent>):JSX.Element => {
     const history = useHistory();
 
     return (

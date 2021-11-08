@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import { Link } from 'react-router-dom';
 
 interface Icard{
@@ -8,7 +8,7 @@ interface Icard{
     isLarge: boolean;
 }
 
-const Card:FC<Icard> = (props):JSX.Element => {
+const Card:FC<Icard> = (props:PropsWithChildren<Icard>):JSX.Element => {
     return (
         //@ts-ignore
         <Link to={props.direction} alt={props.title} data-testid="card-id">

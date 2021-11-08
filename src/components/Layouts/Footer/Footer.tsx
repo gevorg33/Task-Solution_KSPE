@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import Content from "../Content/Content";
 import { Divider, Row, Col, Space } from 'antd';
 import { FacebookIcon, InstagramIcon, TwitterIcon } from "../../../assets/social";
 import { AppStoreIcon, PlayStoreIcon, WindowsStoreIcon } from "../../../assets/store";
 import { Link } from 'react-router-dom';
 
-const Footer:FC<any> = (props):JSX.Element => {
+const Footer:FC<any> = (props:PropsWithChildren<any>):JSX.Element => {
     const menuList:any[] = [
         'Home',
         'Terms and Conditions',
