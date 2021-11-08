@@ -1,0 +1,1 @@
+export const BASE_ADDRESS:string = 'https://raw.githubusercontent.com';
